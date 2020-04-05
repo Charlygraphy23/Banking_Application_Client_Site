@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="446.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.PinpageController">
+   <top>
+      <AnchorPane prefHeight="42.0" prefWidth="446.0" style="-fx-background-color: #29434e;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="usernamePlate" graphicTextGap="20.0" layoutX="14.0" layoutY="10.0" opacity="0.83" prefHeight="22.0" prefWidth="372.0" text="New Pin Registration" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+               <font>
+                  <Font name="Britannic Bold" size="19.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" layoutX="414.0" layoutY="28.0" onMouseClicked="#close" size="18" text="" AnchorPane.rightAnchor="17.857142448425293" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="3.0" layoutY="13.0" prefHeight="407.0" prefWidth="436.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="13.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="122.0" prefWidth="436.0">
+                     <children>
+                        <JFXPasswordField fx:id="newPinTextbox" prefHeight="44.0" prefWidth="274.0" promptText="Enter New Pin">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXPasswordField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="98.0" prefWidth="436.0">
+                     <children>
+                        <JFXPasswordField fx:id="confirmPinTextbox" prefHeight="44.0" prefWidth="274.0" promptText="Confirm Pin">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXPasswordField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="98.0" prefWidth="436.0">
+                     <children>
+                        <JFXButton fx:id="pinSubmintButton" prefHeight="44.0" prefWidth="285.0" style="-fx-background-color: #ef5350;" text="Submit" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

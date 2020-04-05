@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="signUppane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="784.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SignupController">
+   <left>
+      <AnchorPane prefHeight="784.0" prefWidth="417.0" style="-fx-background-color: #ba000d;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="160.0" layoutY="70.0" prefHeight="63.0" prefWidth="98.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="159.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BANK" size="35" text="" />
+               </graphic>
+            </Label>
+            <Label alignment="CENTER" layoutX="46.0" layoutY="133.0" prefHeight="47.0" prefWidth="325.0" text="SUNFLOWER BANK" textFill="WHITE" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="46.0">
+               <font>
+                  <Font name="Bodoni MT Condensed" size="40.0" />
+               </font>
+            </Label>
+            <Circle fx:id="personactiveCircle" fill="WHITE" layoutX="86.0" layoutY="330.0" opacity="0.9" radius="21.0" stroke="WHITE" strokeType="INSIDE" AnchorPane.leftAnchor="65.0" />
+            <Label fx:id="indexone" alignment="CENTER" layoutX="75.0" layoutY="316.0" text="01" AnchorPane.leftAnchor="75.0">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Separator layoutX="1.0" layoutY="289.0" opacity="0.54" prefHeight="2.0" prefWidth="418.0" />
+            <Separator layoutX="1.0" layoutY="372.0" opacity="0.55" prefHeight="0.0" prefWidth="418.0" />
+            <Label fx:id="pesonalLabel" alignment="CENTER" layoutX="130.0" layoutY="311.0" opacity="0.9" prefHeight="39.0" prefWidth="203.0" styleClass="leb" stylesheets="@../style.css" text="Personal Information" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Circle fx:id="accountactiveCircle" fill="WHITE" layoutX="86.0" layoutY="412.0" opacity="0.9" radius="21.0" stroke="WHITE" strokeType="INSIDE" />
+            <Label fx:id="indextwo" alignment="CENTER" layoutX="75.0" layoutY="398.0" text="02">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Separator layoutX="1.0" layoutY="454.0" opacity="0.55" prefHeight="0.0" prefWidth="418.0" />
+            <Label fx:id="accountLabel" alignment="CENTER" layoutX="130.0" layoutY="393.0" opacity="0.9" prefHeight="39.0" prefWidth="203.0" styleClass="leb" stylesheets="@../style.css" text="Account Information" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="backtoLoginButton" alignment="CENTER" contentDisplay="CENTER" layoutX="39.0" layoutY="711.0" prefHeight="40.0" prefWidth="36.0" style="-fx-background-color: #ff7961;" styleClass="redis" stylesheets="@../style.css" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="39.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_LEFT" size="20" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView glyphName="CLOSE" layoutX="544.0" layoutY="22.0" onMouseClicked="#close" size="22" text="" AnchorPane.rightAnchor="14.714284896850586" />
+            <FontAwesomeIconView glyphName="MINUS_SQUARE_ALT" layoutX="518.0" layoutY="21.0" onMouseClicked="#maximize" size="18" AnchorPane.rightAnchor="43.85714244842529" />
+            <FontAwesomeIconView id="circle" accessibleRole="BUTTON" glyphName="MINUS_CIRCLE" layoutX="491.0" layoutY="20.0" onMouseClicked="#minimize" size="18" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="0.0" styleClass="circle" AnchorPane.rightAnchor="69.5714282989502" />
+            <VBox fx:id="personalDetailPane" alignment="CENTER" layoutX="23.0" layoutY="40.0" prefHeight="724.0" prefWidth="531.0" spacing="12.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
+               <children>
+                  <Label alignment="CENTER" opacity="0.82" text="Personal Information">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="417.0" text="Please enter proper details  to build a account and able to go next step" textAlignment="CENTER" wrapText="true" />
+                  <HBox alignment="CENTER" prefHeight="67.0" prefWidth="531.0" spacing="40.0">
+                     <children>
+                        <JFXTextField fx:id="firstName" focusColor="#f89647" prefHeight="42.0" prefWidth="215.0" promptText="Firstname" />
+                        <JFXTextField fx:id="lastName" focusColor="#f89647" prefHeight="42.0" prefWidth="215.0" promptText="Lastname" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="49.0" prefWidth="531.0">
+                     <children>
+                        <JFXComboBox fx:id="idCard" focusColor="#f89647" prefHeight="31.0" prefWidth="488.0" promptText="Select ID Card" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="56.0" prefWidth="531.0">
+                     <children>
+                        <JFXTextField fx:id="cardNo" focusColor="#f89647" prefHeight="31.0" prefWidth="488.0" promptText="ID Card No" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="531.0">
+                     <children>
+                        <JFXTextField fx:id="mobileno" focusColor="#f89647" prefHeight="31.0" prefWidth="488.0" promptText="Mobile No" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="62.0" prefWidth="531.0">
+                     <children>
+                        <JFXTextField fx:id="emailId" focusColor="#f89647" prefHeight="31.0" prefWidth="488.0" promptText="Email ID" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="531.0" spacing="75.0">
+                     <children>
+                        <JFXComboBox fx:id="gender" focusColor="#f89647" prefHeight="31.0" prefWidth="204.0" promptText="Gender" />
+                        <JFXComboBox fx:id="meritalStatus" focusColor="#f89647" prefHeight="31.0" prefWidth="204.0" promptText="Merital Status" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="531.0" spacing="75.0">
+                     <children>
+                        <JFXComboBox fx:id="religion" focusColor="#f89647" prefHeight="31.0" prefWidth="488.0" promptText="Religion" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="531.0" spacing="75.0">
+                     <children>
+                        <JFXDatePicker fx:id="dob" defaultColor="#f89647" prefHeight="31.0" prefWidth="204.0" promptText="Date of Birth" />
+                        <JFXTextField fx:id="age" editable="false" focusColor="#f89647" prefHeight="31.0" prefWidth="204.0" promptText="Age" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="531.0" spacing="75.0">
+                     <children>
+                        <JFXTextField fx:id="pinCode" focusColor="#f89647" prefHeight="31.0" prefWidth="204.0" promptText="Pin Code" />
+                        <JFXTextField fx:id="city" focusColor="#f89647" prefHeight="31.0" prefWidth="204.0" promptText="City" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="531.0" spacing="75.0">
+                     <children>
+                        <JFXTextField fx:id="address" focusColor="#f89647" prefHeight="31.0" prefWidth="488.0" promptText="Adddress" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="38.0" prefWidth="531.0">
+                     <children>
+                        <Label fx:id="nextButton" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="31.0" style="-fx-background-color: #000000;" styleClass="redis" stylesheets="@../style.css">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="ANGLE_RIGHT" size="28" />
+                           </graphic>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="accountDetailspane" alignment="CENTER" layoutX="22.0" layoutY="25.0" prefHeight="739.0" prefWidth="531.0" spacing="12.0" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="25.0">
+               <children>
+                  <Label alignment="CENTER" opacity="0.82" text="Account Information">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="57.0" prefWidth="417.0" text="Please enter proper details like username and password to build a account and able to submit." textAlignment="CENTER" wrapText="true" />
+                  <HBox alignment="CENTER" prefHeight="67.0" prefWidth="531.0" spacing="10.0">
+                     <children>
+                        <JFXTextField fx:id="ifsccode" alignment="CENTER" editable="false" focusColor="#e87e3d" prefHeight="42.0" prefWidth="76.0" text="46368">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="accountNumber" editable="false" focusColor="#f89647" prefHeight="42.0" prefWidth="404.0" promptText="Account No" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="56.0" prefWidth="531.0">
+                     <children>
+                        <JFXTextField fx:id="accuntBalance" focusColor="#f89647" prefHeight="31.0" prefWidth="488.0" promptText="Balance" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="531.0" spacing="75.0">
+                     <children>
+                        <JFXComboBox fx:id="accounttype" focusColor="#f89647" prefHeight="31.0" prefWidth="488.0" promptText="Account Tybe" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="58.0" prefWidth="531.0">
+                     <children>
+                        <JFXTextField fx:id="username" focusColor="#f89647" prefHeight="31.0" prefWidth="488.0" promptText="Username" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="62.0" prefWidth="531.0">
+                     <children>
+                        <JFXTextField fx:id="password" focusColor="#f89647" prefHeight="31.0" prefWidth="488.0" promptText="Password" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="531.0" spacing="75.0">
+                     <children>
+                        <JFXComboBox fx:id="securityq" focusColor="#f89647" prefHeight="31.0" prefWidth="488.0" promptText="Security Questions" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="531.0" spacing="75.0">
+                     <children>
+                        <JFXTextField fx:id="answars" focusColor="#f89647" prefHeight="31.0" prefWidth="488.0" promptText="Answars" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="148.0" prefWidth="531.0" spacing="60.0">
+                     <children>
+                        <ImageView fx:id="photo" fitHeight="164.0" fitWidth="163.0" nodeOrientation="INHERIT" pickOnBounds="true">
+                           <image>
+                              <Image url="@../assets/150.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER" prefHeight="150.0" prefWidth="292.0" spacing="60.0">
+                           <children>
+                              <Label text="Profile picture">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="uploadImage" prefHeight="31.0" prefWidth="232.0" style="-fx-border-color: #000000; -fx-border-radius: 20; -fx-background-radius: 20;" text="Upload Picture" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="38.0" prefWidth="531.0" />
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="531.0" spacing="150.0">
+                     <children>
+                        <Label fx:id="previousButton" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #000000;" styleClass="redis" stylesheets="@../style.css">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_LEFT" size="15" />
+                           </graphic>
+                        </Label>
+                        <JFXButton fx:id="subminbutton" prefHeight="33.0" prefWidth="337.0" stylesheets="@../style.css" text="Submit" />
+                     </children>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

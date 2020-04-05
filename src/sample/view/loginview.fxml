@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="loginPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="784.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoginController">
+   <left>
+      <AnchorPane prefHeight="784.0" prefWidth="417.0" style="-fx-background-color: #ba000d;" BorderPane.alignment="CENTER">
+         <children>
+            <Circle fill="WHITE" layoutX="209.0" layoutY="192.0" radius="100.0" stroke="WHITE" strokeType="INSIDE" />
+            <ImageView fitHeight="140.0" fitWidth="135.0" layoutX="142.0" layoutY="122.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/biz_slt_bankABC.max-752x423.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="47.0" layoutY="320.0" prefHeight="47.0" prefWidth="325.0" text="SUNFLOWER BANK" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Condensed" size="40.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutX="47.0" layoutY="711.0" prefHeight="47.0" prefWidth="325.0" text="© All Rights Received" textFill="WHITE" AnchorPane.bottomAnchor="26.0">
+               <font>
+                  <Font name="Bodoni MT Condensed" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="784.0" prefWidth="620.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView glyphName="CLOSE" layoutX="546.0" layoutY="23.0" onMouseClicked="#close" size="22" text="" AnchorPane.rightAnchor="12.714284896850586" />
+            <FontAwesomeIconView glyphName="MINUS_SQUARE_ALT" layoutX="523.0" layoutY="22.0" onMouseClicked="#maximize" size="18" AnchorPane.rightAnchor="38.85714244842529" />
+            <FontAwesomeIconView id="circle" accessibleRole="BUTTON" glyphName="MINUS_CIRCLE" layoutX="496.0" layoutY="22.0" onMouseClicked="#minimize" size="18" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="0.0" styleClass="circle" AnchorPane.rightAnchor="64.5714282989502" />
+            <Label alignment="CENTER" layoutX="127.0" layoutY="157.0" prefHeight="47.0" prefWidth="325.0" styleClass="lt" stylesheets="@../style.css" text="Login Details" AnchorPane.leftAnchor="127.0" AnchorPane.rightAnchor="124.0">
+               <font>
+                  <Font name="Bodoni MT Condensed" size="49.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <JFXTextField fx:id="username" focusColor="#eb943e" layoutX="91.0" layoutY="275.0" prefHeight="47.0" prefWidth="404.0" promptText="Username" styleClass="text-field" text="diptaAdmin12" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="81.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" focusColor="#eb943e" layoutX="91.0" layoutY="391.0" prefHeight="47.0" prefWidth="404.0" promptText="Password" styleClass="text-field" text="dip12" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="81.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXPasswordField>
+            <Label alignment="CENTER" layoutX="239.0" layoutY="60.0" prefHeight="63.0" prefWidth="98.0" AnchorPane.leftAnchor="239.0" AnchorPane.rightAnchor="239.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="BANK" opacity="0.38" size="35" text="" />
+               </graphic>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" layoutX="53.0" layoutY="306.0" opacity="0.63" size="25" AnchorPane.leftAnchor="53.0" />
+            <FontAwesomeIconView glyphName="KEY" layoutX="52.0" layoutY="422.0" opacity="0.63" size="22" AnchorPane.leftAnchor="52.0" />
+            <Label alignment="CENTER" layoutX="273.0" layoutY="602.0" text="OR" underline="true" AnchorPane.bottomAnchor="155.0" AnchorPane.leftAnchor="273.0" AnchorPane.rightAnchor="273.0">
+               <font>
+                  <Font name="MS Outlook" size="22.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="534.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="59.0" prefWidth="559.0" AnchorPane.bottomAnchor="191.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="534.0">
+               <children>
+                  <JFXButton fx:id="loginButton" alignment="CENTER" buttonType="RAISED" defaultButton="true" prefHeight="40.0" prefWidth="442.0" stylesheets="@../style.css" text="Login" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Impact" size="20.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Separator layoutY="601.0" prefHeight="0.0" prefWidth="576.0" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <HBox alignment="CENTER" layoutX="41.0" layoutY="636.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="91.0" prefWidth="497.0" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="38.0">
+               <children>
+                  <JFXButton fx:id="createAccountButton" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="460.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #000000;" text="Create Account">
+                     <font>
+                        <Font name="MS Reference Sans Serif" size="20.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="79.0" layoutY="459.0" prefHeight="59.0" prefWidth="428.0" spacing="60.0" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="69.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="149.0">
+                     <graphic>
+                        <JFXCheckBox fx:id="adminChechbox" contentDisplay="CENTER" prefHeight="21.0" prefWidth="123.0" text="Staff Login" />
+                     </graphic>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="122.0">
+                     <graphic>
+                        <JFXCheckBox fx:id="userCheckBox" contentDisplay="CENTER" prefHeight="21.0" prefWidth="112.0" text="User Login" />
+                     </graphic>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

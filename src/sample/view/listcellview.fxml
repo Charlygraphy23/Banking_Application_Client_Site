@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="cellpane" prefHeight="220.0" prefWidth="1112.0" style="-fx-background-color: #ff5722;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="11.0" layoutY="5.0" prefHeight="202.0" prefWidth="1175.0" style="-fx-background-color: #ffddc1;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <VBox alignment="CENTER" layoutX="14.0" prefHeight="202.0" prefWidth="586.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="56.0" prefWidth="410.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="cUsernmae" prefHeight="21.0" prefWidth="245.0" text="Username - sdkjfkjshdkfhsk" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="111.0" prefHeight="56.0" prefWidth="410.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="cUserId" prefHeight="21.0" prefWidth="136.0" text="Id - 124" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ifsc" prefHeight="21.0" prefWidth="136.0" text="Ifsc - 31928398" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="139.0" prefHeight="56.0" prefWidth="410.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="cUserAccountNo" prefHeight="21.0" prefWidth="207.0" text="Account no - 123123123123" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="cUseraBalance" alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="206.0" text="Balance - 12124142" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <BorderPane layoutX="793.0" layoutY="1.0" prefHeight="200.0" prefWidth="376.0" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="1.0">
+               <bottom>
+                  <Label fx:id="cLastUpdate" alignment="CENTER_RIGHT" opacity="0.58" prefHeight="21.0" prefWidth="271.0" text="Last Update Profile - 276372815375" BorderPane.alignment="CENTER_RIGHT">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </bottom>
+               <top>
+                  <Label fx:id="cMoreInformation" prefHeight="21.0" prefWidth="142.0" text="+ More Information" BorderPane.alignment="CENTER_RIGHT">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </top>
+               <padding>
+                  <Insets bottom="2.0" top="2.0" />
+               </padding>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="fundTransferImageView" fitHeight="28.0" fitWidth="29.0" layoutX="334.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.0">
+                           <image>
+                              <Image url="@../assets/icons8-rupee-50.png" />
+                           </image>
+                        </ImageView>
+                        <HBox fx:id="fundTransferPane" alignment="CENTER" layoutX="1.0" layoutY="61.0" prefHeight="87.0" prefWidth="376.0" spacing="50.0" visible="false" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <JFXTextField fx:id="ammountTextField" prefHeight="41.0" prefWidth="169.0" promptText="Enter Amount" />
+                              <JFXButton fx:id="amountTransferButton" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #b71c1c;" text="Transfer" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+            <Separator layoutX="697.0" layoutY="-6.0" opacity="0.81" orientation="VERTICAL" prefHeight="216.0" prefWidth="0.0" />
+         </children></AnchorPane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

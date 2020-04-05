@@ -1,0 +1,47 @@
+
+.button{
+    -fx-border-radius: 20px;
+    -fx-border-color: black;
+    -fx-background-radius: 20px;
+}
+
+.button:hover{
+    -fx-background-radius: 20px;
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+.lt{
+    -fx-border-radius: 50px;
+    -fx-border-color: black;
+}
+.redis{
+    -fx-background-radius: 150
+}
+.leb:hover{
+    -fx-opacity: 1;
+}
+
+.next_button{
+    -fx-background-color:#0077c2 ;
+    -fx-background-radius: 50;
+    -fx-border-color: white;
+    -fx-border-radius: 50;
+}
+
+.next_button:hover .right_arrow{
+    -fx-fill: black;
+}
+.next_button:hover{
+    -fx-background-color: white;
+    -opacity: 0.9;
+    -fx-cursor: hand;
+}
+.re{
+    -fx-background-radius: 100px;
+    -fx-background-color: #b61827;
+}
+
+.menuI .hh:hover{
+    -fx-fill: white;
+    -fx-cursor: hand;
+}

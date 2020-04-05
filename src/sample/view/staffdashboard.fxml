@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="859.0" prefWidth="1201.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.StaffDashboardController">
+   <children>
+      <AnchorPane prefHeight="41.0" prefWidth="1201.0" style="-fx-background-color: #0077c2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" layoutX="1154.0" layoutY="27.0" onMouseClicked="#close" size="22" text="" AnchorPane.rightAnchor="29.714284896850586" />
+            <FontAwesomeIconView fill="WHITE" glyphName="MINUS_SQUARE_ALT" layoutX="1117.0" layoutY="25.0" onMouseClicked="#maximize" size="18" AnchorPane.rightAnchor="69.8571424484253" />
+            <FontAwesomeIconView id="circle" accessibleRole="BUTTON" fill="WHITE" glyphName="MINUS_CIRCLE" layoutX="1078.0" layoutY="25.0" onMouseClicked="#minimize" size="18" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="0.0" styleClass="circle" AnchorPane.rightAnchor="107.5714282989502" />
+            <FontAwesomeIconView fill="WHITE" glyphName="BANK" layoutX="14.0" layoutY="25.0" opacity="0.7" size="20" AnchorPane.leftAnchor="14.0" />
+            <Label layoutX="57.0" layoutY="1.0" prefHeight="33.0" prefWidth="296.0" text="Sunflower Bank Limited - Staff Software" textFill="WHITE" AnchorPane.leftAnchor="57.0">
+               <font>
+                  <Font name="Agency FB" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="welcomeScreen" layoutX="16.0" layoutY="75.0" prefHeight="756.0" prefWidth="1168.0" style="-fx-background-color: #80d6ff;" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="75.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <HBox alignment="CENTER" layoutX="-4.0" layoutY="184.0" prefHeight="238.0" prefWidth="1168.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="4.0">
+               <children>
+                  <Circle fx:id="wPhoto" fill="WHITE" radius="119.0" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </HBox>
+            <Label fx:id="wUsername" alignment="CENTER" graphicTextGap="20.0" layoutX="388.0" layoutY="452.0" opacity="0.4" prefHeight="33.0" prefWidth="407.0" text="Welcome - Dipta Biswas (Username)" AnchorPane.leftAnchor="388.0" AnchorPane.rightAnchor="373.0">
+               <font>
+                  <Font name="Britannic Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="wNextButton" alignment="CENTER" layoutX="1058.0" layoutY="665.0" prefHeight="56.0" prefWidth="58.0" styleClass="next_button" stylesheets="@../style.css" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="52.0">
+               <graphic>
+                  <FontAwesomeIconView id="right_arrow" fill="WHITE" glyphName="ANGLE_RIGHT" size="25" styleClass="right_arrow" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <BorderPane fx:id="staffPane" layoutY="42.0" prefHeight="820.0" prefWidth="1201.0" visible="false" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="1201.0" spacing="10.0" style="-fx-background-color: #cfd8dc;" BorderPane.alignment="CENTER">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <children>
+                  <JFXButton fx:id="hHomeButton" prefHeight="42.0" prefWidth="106.0" text="Home">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <Separator opacity="0.25" orientation="VERTICAL" prefHeight="18.0" prefWidth="0.0" />
+                  <JFXButton fx:id="hAccounDetailsButton" prefHeight="42.0" prefWidth="159.0" text="Accounts Details" />
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="homeScreen" prefHeight="767.0" prefWidth="1201.0" style="-fx-background-color: #cfd8dc;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="-2.0" prefHeight="256.0" prefWidth="1207.0" spacing="20.0" style="-fx-background-color: #004c8c;" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <children>
+                              <Circle fx:id="hProfilePic" fill="DODGERBLUE" radius="97.0" stroke="WHITE" strokeType="INSIDE" />
+                              <Label fx:id="hFullNameplate" alignment="CENTER" graphicTextGap="20.0" opacity="0.83" prefHeight="22.0" prefWidth="237.0" text="Dipta Biswas" textFill="WHITE">
+                                 <font>
+                                    <Font name="Britannic Bold" size="21.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="hEmailAddress" alignment="CENTER" graphicTextGap="20.0" layoutX="495.0" layoutY="234.0" opacity="0.83" prefHeight="22.0" prefWidth="502.0" text="Email- ugfugsdufgjksdgfjkg" textFill="WHITE">
+                                 <font>
+                                    <Font name="Britannic Bold" size="21.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="229.0" layoutY="298.0" prefHeight="471.0" prefWidth="744.0" spacing="20.0" style="-fx-background-color: #0277bd;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="229.0" AnchorPane.rightAnchor="228.0" AnchorPane.topAnchor="298.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="151.0" prefHeight="50.0" prefWidth="420.0" spacing="50.0" style="-fx-background-color: #004c8c;">
+                                 <children>
+                                    <Label fx:id="hUsername" graphicTextGap="20.0" opacity="0.83" prefHeight="22.0" prefWidth="379.0" text="Username - ewfgrfgrr" textFill="WHITE">
+                                       <font>
+                                          <Font name="Britannic Bold" size="21.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="hMobileno" alignment="CENTER_RIGHT" graphicTextGap="20.0" opacity="0.83" prefHeight="22.0" prefWidth="263.0" text="Mobile No -23123123123" textFill="WHITE">
+                                       <font>
+                                          <Font name="Britannic Bold" size="21.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="15.0" layoutY="229.0" prefHeight="50.0" prefWidth="420.0" spacing="50.0" style="-fx-background-color: #004c8c;">
+                                 <children>
+                                    <Label fx:id="hDateofBirth" graphicTextGap="20.0" opacity="0.83" prefHeight="22.0" prefWidth="379.0" text="Date of birth - 21212121" textFill="WHITE">
+                                       <font>
+                                          <Font name="Britannic Bold" size="21.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="hAge" alignment="CENTER_RIGHT" graphicTextGap="20.0" opacity="0.83" prefHeight="22.0" prefWidth="263.0" text="Age -  222" textFill="WHITE">
+                                       <font>
+                                          <Font name="Britannic Bold" size="21.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="256.0" prefHeight="50.0" prefWidth="420.0" spacing="50.0" style="-fx-background-color: #004c8c;">
+                                 <children>
+                                    <Label fx:id="hDesignation" graphicTextGap="20.0" opacity="0.83" prefHeight="22.0" prefWidth="379.0" text="Designation - jasgdhsdgku" textFill="WHITE">
+                                       <font>
+                                          <Font name="Britannic Bold" size="21.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="hGender" alignment="CENTER_RIGHT" graphicTextGap="20.0" opacity="0.83" prefHeight="22.0" prefWidth="263.0" text="Gender - jbfdjkjg" textFill="WHITE">
+                                       <font>
+                                          <Font name="Britannic Bold" size="21.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="291.0" prefHeight="50.0" prefWidth="420.0" spacing="50.0" style="-fx-background-color: #004c8c;">
+                                 <children>
+                                    <Label fx:id="hDateofJoinning" graphicTextGap="20.0" opacity="0.83" prefHeight="22.0" prefWidth="300.0" text="Date of Joinning -  72146326" textFill="WHITE">
+                                       <font>
+                                          <Font name="Britannic Bold" size="21.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="326.0" prefHeight="50.0" prefWidth="420.0" spacing="50.0" style="-fx-background-color: #004c8c;">
+                                 <children>
+                                    <Label fx:id="hAddress" alignment="CENTER" graphicTextGap="20.0" opacity="0.83" prefHeight="22.0" prefWidth="696.0" text="Address - dhfkshdkfhk" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="Britannic Bold" size="21.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="accountDetailsScreen" prefHeight="770.0" prefWidth="1201.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="-1.0" layoutY="16.0" prefHeight="750.0" prefWidth="1201.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="16.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="108.0" prefWidth="1201.0" spacing="150.0">
+                                 <children>
+                                    <JFXTextField fx:id="searchAccountNo" prefHeight="40.0" prefWidth="698.0" promptText="Enter Account No" />
+                                    <JFXButton fx:id="searchButton" prefHeight="45.0" prefWidth="148.0" style="-fx-background-color: #0069c0;" text="Searsh" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></JFXButton>
+                                 </children>
+                              </HBox>
+                              <JFXListView fx:id="listOfAllAccounts" prefHeight="643.0" prefWidth="1201.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
